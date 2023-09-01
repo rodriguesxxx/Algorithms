@@ -1,18 +1,18 @@
 package models;
 
 class Node{
-    private Integer date;
+    private Object date;
     private Node next = null;
     
-    public Node(Integer date){
+    public Node(Object date){
         this.setDate(date);
     }
 
-    public Integer getDate(){
+    public Object getDate(){
         return this.date;
     }
 
-    public void setDate(Integer date){
+    public void setDate(Object date){
         this.date = date;
     }
 
