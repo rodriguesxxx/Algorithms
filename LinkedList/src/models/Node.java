@@ -1,18 +1,18 @@
 package models;
 
-class Node{
-    private Object date;
+class Node<T>{
+    private T date;
     private Node next = null;
     
-    public Node(Object date){
+    public Node(T date){
         this.setDate(date);
     }
 
-    public Object getDate(){
+    public T getDate(){
         return this.date;
     }
 
-    public void setDate(Object date){
+    public void setDate(T date){
         this.date = date;
     }
 

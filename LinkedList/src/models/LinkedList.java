@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import models.Node;
 
-public class LinkedList {
+public class LinkedList<T> {
     
     private Node head;
     private Integer size;
@@ -15,7 +15,7 @@ public class LinkedList {
         this.size = 0;
     }
 
-    public void add(Object value){
+    public void add(T value){
         if (this.head != null){
             Node pointer = this.head;
             while( pointer.getNext() != null ){
