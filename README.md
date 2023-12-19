@@ -1,5 +1,5 @@
 # Algorithms
-Resolution of several algorithms in java, from basic to advanced
+Resolution of several algorithms, from basic to advanced
 
 ## Linked List
 
