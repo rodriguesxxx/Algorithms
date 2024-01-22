@@ -21,3 +21,9 @@ After the counting phase, the algorithm uses the `<iomanip>` library to adjust t
 Finally, the algorithm prints the proportions of the three categories. Each proportion represents the count of elements in a specific category divided by the total size of the vector. The adjusted formatting ensures that trailing zeros are printed, even when the fractional part has no significant digits.
 
 <a href="./PlusMinus">Source Code</a>
+
+## Staircase
+
+The ladder algorithm can be considered as a counterpoint to array-based structures. While LinkedLists are dynamic and flexible, staircases offer a visual representation in the form of steps, created and adjusted according to demand.
+
+<a href="./Staircase/">Source Code</a>
