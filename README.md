@@ -27,3 +27,9 @@ Finally, the algorithm prints the proportions of the three categories. Each prop
 The ladder algorithm can be considered as a counterpoint to array-based structures. While LinkedLists are dynamic and flexible, staircases offer a visual representation in the form of steps, created and adjusted according to demand.
 
 <a href="./Staircase/">Source Code</a>
+
+## MiniMax Sum
+
+This algorithm checks the maximum and minimum sum in a range of 4 values ​​in a vector
+
+<a href="./MiniMaxSum/">Source Code</a>
