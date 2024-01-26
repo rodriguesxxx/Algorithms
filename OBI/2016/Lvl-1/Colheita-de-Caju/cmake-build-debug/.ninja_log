@@ -1,9 +1,0 @@
-# ninja log v5
-1	34	1706281867626101541	build.ninja	d7a1bc8e8ab42387
-0	321	1706280871929233826	CMakeFiles/Colheita_de_Caju.dir/soluction.cpp.o	3122970ec70292e
-0	350	1706281264815154548	CMakeFiles/Colheita_de_Caju.dir/main.cpp.o	dfa06689273f4ef9
-350	447	1706281264911155017	Colheita_de_Caju	c78efb5f9963dbbc
-0	39	1706281867626101541	build.ninja	d7a1bc8e8ab42387
-1	397	1706281868030103516	CMakeFiles/Colheita_de_Caju.dir/main.cpp.o	dfa06689273f4ef9
-1	445	1706281868078103751	CMakeFiles/Colheita_de_Caju.dir/soluction.cpp.o	3122970ec70292e
-445	560	1706281868194104318	Colheita_de_Caju	b32382086cd43758
