@@ -1,0 +1,3 @@
+/home/rodriguesxxx/studies/Algorithms/OBI/2016/Lvl-1/Colheita-de-Caju/cmake-build-debug/CMakeFiles/Colheita_de_Caju.dir
+/home/rodriguesxxx/studies/Algorithms/OBI/2016/Lvl-1/Colheita-de-Caju/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rodriguesxxx/studies/Algorithms/OBI/2016/Lvl-1/Colheita-de-Caju/cmake-build-debug/CMakeFiles/rebuild_cache.dir
