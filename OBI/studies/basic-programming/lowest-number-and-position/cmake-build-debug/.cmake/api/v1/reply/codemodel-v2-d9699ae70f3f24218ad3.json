@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lowest_number_and_position",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lowest_number_and_position::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lowest_number_and_position-Debug-2e3004b1b99a7c94d75c.json",
+					"name" : "lowest_number_and_position",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rodriguesxxx/studies/Algorithms/OBI/studies/basic-programming/lowest-number-and-position/cmake-build-debug",
+		"source" : "/home/rodriguesxxx/studies/Algorithms/OBI/studies/basic-programming/lowest-number-and-position"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

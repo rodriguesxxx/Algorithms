@@ -1,0 +1,17 @@
+# ninja log v5
+0	429	1706369713879587399	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+430	551	1706369713999587986	lowest_number_and_position	d868e828e097b276
+1	495	1706370134149641995	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+495	599	1706370134253642504	lowest_number_and_position	d868e828e097b276
+1	299	1706370196933948932	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+300	393	1706370197029949401	lowest_number_and_position	d868e828e097b276
+1	305	1706370311178507445	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+305	393	1706370311266507875	lowest_number_and_position	d868e828e097b276
+0	295	1706370352718710525	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+295	383	1706370352802710936	lowest_number_and_position	d868e828e097b276
+0	412	1706370603555936806	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+412	525	1706370603667937353	lowest_number_and_position	d868e828e097b276
+0	306	1706370645404141391	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+306	394	1706370645488141802	lowest_number_and_position	d868e828e097b276
+1	367	1706370809380943033	CMakeFiles/lowest_number_and_position.dir/main.cpp.o	bc8a5dd36c2ad742
+367	466	1706370809480943522	lowest_number_and_position	d868e828e097b276
