@@ -1,0 +1,166 @@
+{
+  "main": {
+    "id": "cc61e17266794ec5",
+    "type": "split",
+    "children": [
+      {
+        "id": "ddbf366bb3a666c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "046a1f867e59fb26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OBI/2006/Lvl-1/Escada-Perfeita/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1f4e522dd48c2894",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba674a6b4ab269f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b378a99bf0695b00",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0c5f1a15b54e27da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a31070947791ee7c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d2c6b580205a8f94",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2b24d8b0307bdcb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d9ae8736a7511ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "OBI/2006/Lvl-1/Escada-Perfeita/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "89fa8f2b18d28f7c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "OBI/2006/Lvl-1/Escada-Perfeita/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "333844191df2b101",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cdda873ed9a6eb02",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "OBI/2006/Lvl-1/Escada-Perfeita/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "046a1f867e59fb26",
+  "lastOpenFiles": [
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/Testing/Temporary/LastTest.log.tmp",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/Escada_Perfeita.dir/src/soluction.cpp.o.d",
+    "OBI/2006/Lvl-1/Escada-Perfeita/src/soluction.cpp~",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/Escada_Perfeita",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/Escada_Perfeita.dir/src/soluction.cpp.o",
+    "OBI/2006/Lvl-1/Colheita-de-Caju/README.md",
+    "OBI/2006/Lvl-1/Escada-Perfeita/README.md",
+    "OBI/README.md",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/Testing/Temporary/LastTest.log",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/Testing/Temporary",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/Testing",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/clion-Debug-log.txt",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/build.ninja",
+    "OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/rules.ninja"
+  ]
+}
