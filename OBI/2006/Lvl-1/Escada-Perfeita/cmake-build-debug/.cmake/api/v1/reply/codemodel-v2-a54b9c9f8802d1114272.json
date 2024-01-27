@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Escada_Perfeita",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Escada_Perfeita::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Escada_Perfeita-Debug-6a7ce6cbed86fde73eaf.json",
+					"name" : "Escada_Perfeita",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rodriguesxxx/studies/Algorithms/OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug",
+		"source" : "/home/rodriguesxxx/studies/Algorithms/OBI/2006/Lvl-1/Escada-Perfeita"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

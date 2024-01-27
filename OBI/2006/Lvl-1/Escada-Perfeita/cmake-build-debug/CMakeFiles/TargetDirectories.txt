@@ -1,0 +1,3 @@
+/home/rodriguesxxx/studies/Algorithms/OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/Escada_Perfeita.dir
+/home/rodriguesxxx/studies/Algorithms/OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rodriguesxxx/studies/Algorithms/OBI/2006/Lvl-1/Escada-Perfeita/cmake-build-debug/CMakeFiles/rebuild_cache.dir
