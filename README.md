@@ -2,34 +2,38 @@
 
 Resolution of several algorithms, from basic to advanced
 
-## Linked List
+## BASIC
 
-LinkedLists can be seen as a counterpoint to array-based structures. LinkedList are dynamic lists. Unlike array-based structures, objects in a LinkedList are created and removed on demand.
+-   ### Plus Minus
 
-<a href="./LinkedList">Source Code</a>
+    This algorithm addresses the counting and calculation of proportions for three distinct categories of numbers within a vector:
 
-## Plus Minus
+    1. **Positive Numbers:** Counts the quantity of positive numbers in the vector.
+    2. **Negative Numbers:** Counts the quantity of negative numbers in the vector.
+    3. **Zeros:** Counts the quantity of zeros in the vector.
 
-This algorithm addresses the counting and calculation of proportions for three distinct categories of numbers within a vector:
+    After the counting phase, the algorithm uses the `<iomanip>` library to adjust the output formatting. Specifically, `setprecision(5)` is employed to set the output precision to 5 digits after the decimal point. The `fixed` keyword is used to ensure that this precision applies to the digits to the right of the decimal point.
 
-1. **Positive Numbers:** Counts the quantity of positive numbers in the vector.
-2. **Negative Numbers:** Counts the quantity of negative numbers in the vector.
-3. **Zeros:** Counts the quantity of zeros in the vector.
+    Finally, the algorithm prints the proportions of the three categories. Each proportion represents the count of elements in a specific category divided by the total size of the vector. The adjusted formatting ensures that trailing zeros are printed, even when the fractional part has no significant digits.
 
-After the counting phase, the algorithm uses the `<iomanip>` library to adjust the output formatting. Specifically, `setprecision(5)` is employed to set the output precision to 5 digits after the decimal point. The `fixed` keyword is used to ensure that this precision applies to the digits to the right of the decimal point.
+    <a href="./BASIC/PlusMinus">Source Code</a>
 
-Finally, the algorithm prints the proportions of the three categories. Each proportion represents the count of elements in a specific category divided by the total size of the vector. The adjusted formatting ensures that trailing zeros are printed, even when the fractional part has no significant digits.
+-   ### Staircase
 
-<a href="./PlusMinus">Source Code</a>
+    The ladder algorithm can be considered as a counterpoint to array-based structures. While LinkedLists are dynamic and flexible, staircases offer a visual representation in the form of steps, created and adjusted according to demand.
 
-## Staircase
+    <a href="./BASIC/Staircase/">Source Code</a>
 
-The ladder algorithm can be considered as a counterpoint to array-based structures. While LinkedLists are dynamic and flexible, staircases offer a visual representation in the form of steps, created and adjusted according to demand.
+-   ### MiniMax Sum
 
-<a href="./Staircase/">Source Code</a>
+    This algorithm checks the maximum and minimum sum in a range of 4 values ​​in a vector
 
-## MiniMax Sum
+    <a href="./BASIC/MiniMaxSum/">Source Code</a>
 
-This algorithm checks the maximum and minimum sum in a range of 4 values ​​in a vector
+## MEDIUM
 
-<a href="./MiniMaxSum/">Source Code</a>
+-   ### Linked List
+
+    LinkedLists can be seen as a counterpoint to array-based structures. LinkedList are dynamic lists. Unlike array-based structures, objects in a LinkedList are created and removed on demand.
+
+    <a href="./MEDIUM/LinkedList">Source Code</a>
