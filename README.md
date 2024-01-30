@@ -30,6 +30,12 @@ Resolution of several algorithms, from basic to advanced
 
     <a href="./BASIC/MiniMaxSum/">Source Code</a>
 
+-   ### BogoSort
+
+    BogoSort is an extremely inefficient sorting algorithm. It is based on random reordering of elements. Not used in practice, but can be used to teach more efficient algorithms.
+
+    <a href="./BASIC/BogoSort/">Source Code</a>
+
 ## MEDIUM
 
 -   ### Linked List
