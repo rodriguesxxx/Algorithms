@@ -36,6 +36,12 @@ Resolution of several algorithms, from basic to advanced
 
     <a href="./BASIC/BogoSort/">Source Code</a>
 
+-   ### Birthday Cake Candles
+
+    You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age
+
+    <a href="./BASIC/Candles/">Source Code</a>
+
 ## MEDIUM
 
 -   ### Linked List
