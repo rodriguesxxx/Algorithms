@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<int> buyingCards = {2, 1, 3};
+    vector<int> buyingCards = {3, 6, 7, 1, 5, 4, 2};
     vector<int> cardDiscard;
     vector<int> deadCards;
 
