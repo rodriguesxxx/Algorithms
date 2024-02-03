@@ -32,7 +32,6 @@ class String {
         friend std::istream& operator>>(std::istream &in, String &s) {
             char buffer[256];
             in >> buffer;
-            delete[] s.str;
             s.setStr(buffer);
             return in;
         }
