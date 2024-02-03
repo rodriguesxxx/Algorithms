@@ -22,7 +22,6 @@ class String {
 
         String(const char *s = "") {
             this->setStr(s);
-            strcpy(str, s);
         }
 
         friend std::ostream& operator<<(std::ostream &out, const String &s) {
