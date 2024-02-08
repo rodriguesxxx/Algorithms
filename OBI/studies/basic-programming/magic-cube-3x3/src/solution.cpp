@@ -3,31 +3,56 @@
 #include <algorithm>
 using namespace std;
 
-int sumOfColumn(vector<int>& column) {
-    int sum = 0;
-    for_each(column.begin(), column.end(), [&sum](int value){
-        sum+=value;
-    });
-    return sum;
+vector<int> columnSums(vector<vector<int>>& square) {
+    vector<int> sums;
+    for(int i = 0; i < square.size(); i++) {
+        int sum = 0;
+        for(int j = 0; j < square.size(); j++) {
+            sum+=square[j][i];
+        }
+        sums.push_back(sum);
+    }
+    return sums;
 }
 
-int sumOfRow(vector<vector<int>>& square) {
-    int sum = 0;
-    
+vector<int> rowSums(vector<vector<int>>& square) {
+    vector<int> sums;
+    for(int i = 0; i < square.size(); i++) {
+        int sum = 0;
+        for(int j = 0; j < square.size(); j++) {
+            sum+=square[i][j];
+        }
+        sums.push_back(sum);
+    }
+    return sums;
+
+}
+
+
+//TODO: FIX: corrigir erro logico na validacao
+bool isValidSums(vector<int> sums) {
+
+    int total_sum = 0;
+    for(int sum : sums) {
+        total_sum += sum;
+    }
+
+    int avg = total_sum / sums.size();
+    if(avg == sums[0]) {
+        return true;
+    }
+    return false;
+
 }
 
 bool isMagicSquare(vector<vector<int>>& square) {
-    
-    //validation of the sum of the columns
-    bool isValidatedColumnSum;
-    int oldSum = 0;
-    for(vector<int> column : square) {
-        int sum = sumOfColumn(column);
-        if(oldSum == sum) isValidatedColumnSum = true;
-        else isValidatedColumnSum = false;
-        oldSum = sum;
+
+    vector<int> sumOfRows = rowSums(square);
+    vector<int> sumOfColumns = columnSums(square);
+    if(isValidSums(sumOfColumns) && isValidSums(sumOfRows)) {
+        return true;
     }
-    return isValidatedColumnSum;
+    return false;
 }
 
 int main() {
