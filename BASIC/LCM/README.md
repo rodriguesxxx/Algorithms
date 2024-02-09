@@ -14,10 +14,10 @@ The numbers must be divided by a sequence of prime numbers, until the result of 
 
 ## Explication
 
-|2|3|2|
-|-|-|-|
-|1|3|3
-|1|1|6|
+| 2   | 3   | 2   |
+| --- | --- | --- |
+| 1   | 3   | 3   |
+| 1   | 1   | 6   |
 
     2 / 2 - 1
     3 / 2 - ignore it
@@ -25,3 +25,5 @@ The numbers must be divided by a sequence of prime numbers, until the result of 
     3 / 3 - 1
 
     2 * 3 = 6
+
+<a href="src/solution.cpp">solution</a>
