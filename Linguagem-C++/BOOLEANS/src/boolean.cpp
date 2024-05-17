@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    bool is = not true; // = false
-    cout << is << endl;
+    bool is = true; // = false
+    cout << (is > false) << endl;
     return 0;
 }
