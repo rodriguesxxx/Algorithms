@@ -8,7 +8,7 @@
 using namespace std;
 
 struct LinearEquation {
-    float a1 = 0, b1 = 0, r1 = 0, a2 = 0, b2 = 0, r2 = 0;
+    float a1, b1, r1, a2, b2, r2;
 };
 
 void process_expression(const string &expression, float &coefX, float &coefY, float &res) {
