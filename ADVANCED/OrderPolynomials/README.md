@@ -1,4 +1,4 @@
-Create an algorithm/lib to order polynomials of the same variable based on their degree.
+Create an algorithm to order polynomials of the same variable based on their degree.
 
 **_The main focus of the algorithm is to apply the best sorting strategy_**
 
@@ -30,5 +30,6 @@ x^3 + 2x^2 + 3x - 4
 **EX(output):**
 
 ```bash
+#degrees: [3, 1, 0]
 4x^3 + 3x - 4
 ```
