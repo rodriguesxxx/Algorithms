@@ -12,7 +12,7 @@ struct Term {
 /*
 REMOVE SPACE OF STRING
 */
-void strrmv(char *s) {
+static void strrmv(char *s) {
     int i, k = 0;
     for(i = 0; s[i]; i++) {
         if(s[i] != ' ') {
@@ -25,7 +25,7 @@ void strrmv(char *s) {
 /*
 COUNTING HOW MANY TIMES A CHARACTER APPEARS IN THE STRING
 */
-int strcount(char *s, char c1, char c2) {
+static int strcount(char *s, char c1, char c2) {
     int i, count = 0;
     for(i = 0; i < strlen(s); i++) {
         if(s[i] == c1 || s[i] == c2) {
@@ -33,6 +33,48 @@ int strcount(char *s, char c1, char c2) {
         }
     }
     return count;
+}
+
+/*
+MERGING TWO ARRANGEMENTS IN AN ORDERED WAY
+*/
+static void merge(int arr[], int begin, int mid, int end) {
+    int* arr_aux = (int*)malloc((end - begin) * sizeof(int));
+
+    int i = begin, j = mid, k = 0;
+
+    while(i < mid && j < end) {
+        if(arr[i] < arr[j]) arr_aux[k++] = arr[i++];
+        else arr_aux[k++] = arr[j++];
+    }
+
+    while(i < mid) arr_aux[k++] = arr[i++];
+
+    while(j < end) arr_aux[k++] = arr[j++];
+
+    for(i = begin, k = 0; i < end;) arr[i++] = arr_aux[k++];
+
+    free(arr_aux);
+}
+
+/*
+USING DIVISION AND CONQUEST TO ORDER ARRAY
+*/
+static void sort(int arr[], int begin, int end) {
+    if(begin < end - 1) {
+        int mid = (begin + end) / 2;
+        sort(arr, begin, mid);
+        sort(arr, mid, end);
+        merge(arr, begin, mid, end);
+    }
+}
+
+static struct Term* solve_similar_terms(struct Term* terms, int* n_terms) {
+    int n = *n_terms;
+    printf("%d\n", n);
+    //TODO: Percorrer todos os termos e solucionar termos semelhantes, recriar vetor de termos.
+    
+    return terms;
 }
 
 struct Term* get_terms(char *expression, int size_terms) {
@@ -57,15 +99,7 @@ struct Term* get_terms(char *expression, int size_terms) {
     return terms;
 }
 
-struct Term* solve_similar_terms(struct Term* terms, int* n_terms) {
-    int n = *n_terms;
-    printf("%d\n", n);
-    //TODO: Percorrer todos os termos e solucionar termos semelhantes, recriar vetor de termos.
-    
-    return terms;
-}
-
-struct Term* process_expresion(char *expression, int *n_terms) {
+static struct Term* process_expresion(char *expression, int *n_terms) {
     
     strrmv(expression);
     
