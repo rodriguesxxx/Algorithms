@@ -1,21 +1,22 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-
+#include<ctype.h>
 
 struct Term {
-    char exp[5];
-    char sign;
-    int degree;
+    int coef; //default: 1
+    char *vars; //default: ''
+    char sign; //default: '+'
+    int degree; //default: vars == '' ? 0 : [1...9]
 };
 
 /*
 REMOVE SPACE OF STRING
 */
-static void strrmv(char *s) {
+static void strrmv(char *s, char c) {
     int i, k = 0;
     for(i = 0; s[i]; i++) {
-        if(s[i] != ' ') {
+        if(s[i] != c) {
             s[k++] = s[i];
         }
     }
@@ -40,6 +41,11 @@ MERGING TWO ARRANGEMENTS IN AN ORDERED WAY
 */
 static void merge(int arr[], int begin, int mid, int end) {
     int* arr_aux = (int*)malloc((end - begin) * sizeof(int));
+
+    if(arr_aux == NULL) {
+        printf("[merge] -> Erro ao alocar memória!");
+        exit(1);
+    }
 
     int i = begin, j = mid, k = 0;
 
@@ -69,13 +75,13 @@ static void sort(int arr[], int begin, int end) {
     }
 }
 
-static struct Term* solve_similar_terms(struct Term* terms, int* n_terms) {
-    int n = *n_terms;
-    printf("%d\n", n);
-    //TODO: Percorrer todos os termos e solucionar termos semelhantes, recriar vetor de termos.
+// static struct Term* solve_similar_terms(struct Term* terms, int* n_terms) {
+//     int n = *n_terms;
+//     printf("%d\n", n);
+//     //TODO: Percorrer todos os termos e solucionar termos semelhantes, recriar vetor de termos.
     
-    return terms;
-}
+//     return terms;
+// }
 
 struct Term* get_terms(char *expression, int size_terms) {
     
@@ -83,10 +89,38 @@ struct Term* get_terms(char *expression, int size_terms) {
     struct Term* terms = (struct Term*)malloc(size_terms * sizeof(struct Term));
 
     if(terms == NULL) {
-        printf("Erro ao alocar memória!");
+        printf("[get_terms] -> Erro ao alocar memória!");
         exit(1);
     }
 
+    //3x+x^3-4+3x^3
+    for(int i = 0; i < strlen(expression); ++i) {
+        char* coef_str;
+        char* vars;
+        int degree = 0;    
+
+        if(expression[i] == '^') degree = isdigit(expression[i+1]) ? expression[i+1] : degree;
+
+        if(isdigit(expression[i]) && 
+            (i > 0 && expression[i - 1] != '^') 
+        ) {
+            strcat(coef_str, (char*)expression[i]);
+        }
+        
+        if(!isdigit(expression[i]) && expression[i] != '^') (char*)strcat(vars, expression[i]);
+
+
+        if(expression[i] == '+' || expression[i] == '-') {
+            struct Term term;
+
+            term.sign = expression[i];
+            term.coef = (int)coef_str;
+            term.vars = vars;
+
+            terms[i] = term;
+        }
+
+    }
 
     //TODO: Pegar termos da expressao e registrar no vetor
 
@@ -99,18 +133,18 @@ struct Term* get_terms(char *expression, int size_terms) {
     return terms;
 }
 
-static struct Term* process_expresion(char *expression, int *n_terms) {
+static struct Term* process_expresion(char *expression, int n_terms) {
     
-    strrmv(expression);
+    strrmv(expression, ' ');
     
     //TODO: melhorar fluxo
     
     int n = strcount(expression, '+', '-');
     n = (n * 2 - n) + 1;
     
-    *n_terms = n;
+    n_terms = n;
 
-    struct Term* terms = solve_similar_terms(get_terms(expression, n), n_terms);
+    struct Term* terms = get_terms(expression, n), n_terms;
     
     return terms;
 }
@@ -118,8 +152,12 @@ static struct Term* process_expresion(char *expression, int *n_terms) {
 char* order(char *expression) {
     
     int n_terms;
-    struct Term* terms = process_expresion(expression, &n_terms);
+    struct Term* terms = process_expresion(expression, n_terms);
     
+    for(int i = 0; i < n_terms; ++i) {
+        printf("%d\n", terms[i].coef);
+    }
+
     free(terms);
 
     return expression;
