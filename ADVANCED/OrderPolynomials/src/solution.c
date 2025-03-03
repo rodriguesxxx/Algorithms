@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<ctype.h>
+#include "includes/mergesort.h"
 
 struct Term {
     int coef; //default: 1
@@ -36,43 +37,18 @@ static int strcount(char *s, char c1, char c2) {
     return count;
 }
 
-/*
-MERGING TWO ARRANGEMENTS IN AN ORDERED WAY
-*/
-static void merge(int arr[], int begin, int mid, int end) {
-    int* arr_aux = (int*)malloc((end - begin) * sizeof(int));
+static void charcat(char* str, char c) {
+    char buffer[9];
+            
+    buffer[0] = c;
+    buffer[1] = '\0';
 
-    if(arr_aux == NULL) {
-        printf("[merge] -> Erro ao alocar memória!");
-        exit(1);
-    }
+    printf("[charcat][c] %c\n", c);
 
-    int i = begin, j = mid, k = 0;
+    strcat(str, buffer);
 
-    while(i < mid && j < end) {
-        if(arr[i] < arr[j]) arr_aux[k++] = arr[i++];
-        else arr_aux[k++] = arr[j++];
-    }
+    printf("[charcat][str] %s\n", str);
 
-    while(i < mid) arr_aux[k++] = arr[i++];
-
-    while(j < end) arr_aux[k++] = arr[j++];
-
-    for(i = begin, k = 0; i < end;) arr[i++] = arr_aux[k++];
-
-    free(arr_aux);
-}
-
-/*
-USING DIVISION AND CONQUEST TO ORDER ARRAY
-*/
-static void sort(int arr[], int begin, int end) {
-    if(begin < end - 1) {
-        int mid = (begin + end) / 2;
-        sort(arr, begin, mid);
-        sort(arr, mid, end);
-        merge(arr, begin, mid, end);
-    }
 }
 
 // static struct Term* solve_similar_terms(struct Term* terms, int* n_terms) {
@@ -83,10 +59,10 @@ static void sort(int arr[], int begin, int end) {
 //     return terms;
 // }
 
-struct Term* get_terms(char *expression, int size_terms) {
+struct Term* get_terms(char *expression, int n_terms) {
     
 
-    struct Term* terms = (struct Term*)malloc(size_terms * sizeof(struct Term));
+    struct Term* terms = (struct Term*)malloc(n_terms * sizeof(struct Term));
 
     if(terms == NULL) {
         printf("[get_terms] -> Erro ao alocar memória!");
@@ -95,31 +71,39 @@ struct Term* get_terms(char *expression, int size_terms) {
 
     //3x+x^3-4+3x^3
     for(int i = 0; i < strlen(expression); ++i) {
-        char* coef_str;
-        char* vars;
+        char coef_str[9];
+        char vars[3]; //x,y,z
         int degree = 0;    
 
-        if(expression[i] == '^') degree = isdigit(expression[i+1]) ? expression[i+1] : degree;
+        printf("[get_terms][exp[i]]: %c\n", expression[i]);
 
-        if(isdigit(expression[i]) && 
-            (i > 0 && expression[i - 1] != '^') 
-        ) {
-            strcat(coef_str, (char*)expression[i]);
+        if(expression[i] == '^') {
+            degree = isdigit(expression[i+1]) ? expression[i+1] : degree;
         }
-        
-        if(!isdigit(expression[i]) && expression[i] != '^') (char*)strcat(vars, expression[i]);
 
+        if(!isdigit(expression[i]) && expression[i] != '^' && expression[i] != '+' && expression[i] != '-') {
+            charcat(vars, expression[i]);
+            printf("[get_terms][vars]: %s\n", vars);
+        }
 
         if(expression[i] == '+' || expression[i] == '-') {
             struct Term term;
 
             term.sign = expression[i];
-            term.coef = (int)coef_str;
-            term.vars = vars;
+            term.degree = degree;
+            strcpy(term.vars, vars);
+            // term.coef = isdigit(coef_str) ? (int)coef_str : 1;
+            printf("[get_terms][term.degree]: %d\n", term.degree);
+            printf("[get_terms][term.vars]: %s\n", term.vars);
+            // terms[i] = term;
 
-            terms[i] = term;
         }
 
+        // if(isdigit(expression[i]) && 
+        //     (i > 0 && expression[i - 1] != '^') 
+        // ) {
+        //     strcat(coef_str, (char*)expression[i]);
+        // }
     }
 
     //TODO: Pegar termos da expressao e registrar no vetor
@@ -144,7 +128,7 @@ static struct Term* process_expresion(char *expression, int n_terms) {
     
     n_terms = n;
 
-    struct Term* terms = get_terms(expression, n), n_terms;
+    struct Term* terms = get_terms(expression, n_terms);
     
     return terms;
 }
@@ -154,9 +138,9 @@ char* order(char *expression) {
     int n_terms;
     struct Term* terms = process_expresion(expression, n_terms);
     
-    for(int i = 0; i < n_terms; ++i) {
-        printf("%d\n", terms[i].coef);
-    }
+    // for(int i = 0; i < n_terms; ++i) {
+    //     printf("%d\n", terms[i].coef);
+    // }
 
     free(terms);
 
@@ -166,12 +150,16 @@ char* order(char *expression) {
 int main() {
     
     char polynomial[100] = {"3x + x^3 - 4 + 3x^3"};
-
+    
+    int arr[] = {4, 2, 3, 1};
+    sort(arr, 0, 4);
+    for(int i = 0; i < 4; i++) {
+        printf("%d\n", arr[i]);
+    }
     // printf("Polinômio: ");
     // fgets(polynomial, sizeof(polynomial), stdin);
     // polynomial[strcspn(polynomial, "\n")] = 0;
-
-    printf("%s\n", order(polynomial));
+    // order(polynomial);
 
     return 0;
 }
