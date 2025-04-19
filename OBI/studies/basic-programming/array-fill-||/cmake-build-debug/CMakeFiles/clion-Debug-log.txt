@@ -1,6 +1,0 @@
-/home/rodriguesxxx/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/rodriguesxxx/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S "/home/rodriguesxxx/studies/Algorithms/OBI/studies/basic-programming/array-fill-||" -B "/home/rodriguesxxx/studies/Algorithms/OBI/studies/basic-programming/array-fill-||/cmake-build-debug"
-CMake Error at CMakeLists.txt:6:
-  Parse error.  Function missing ending ")".  End of file reached.
-
-
--- Configuring incomplete, errors occurred!
