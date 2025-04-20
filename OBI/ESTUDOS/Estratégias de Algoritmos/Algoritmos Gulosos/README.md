@@ -83,6 +83,32 @@ int main() {
 }
 ```
 
+## Como identificar se um problema pode ser resolvido com algoritmo guloso?
+
+Você deve verificar se o problema atende essas duas propriedades `Sobestrutura ótima` e `Escolha gulosa`
+
+-   ### Sobestrutura ótima
+
+    A solução ótima do problema pode ser construída a partir das soluções ótimas dos subproblemas.
+
+    Ou seja, se resolver bem partes pequenas do problema te leva à melhor solução global.
+
+    Um bom exemplo disso é no problema das tarefas: Se você sempre escolher as tarefas mais curtas primeiro (escolha ótima local), vai realizar mais tarefas no final (solução ótima global).
+
+    ```c++
+    sort(Ni.begin(), Ni.end());
+    ```
+
+-   ### Escolha gulosa
+
+    Você pode tomar decisões locais (passo a passo) que levam à solução global ótima sem precisar rever suas escolhas anteriores.
+
+    ```c++
+    while(x > 0 && x >= Ni[r]) {
+        r++; //nunca voltamos em uma mesma moeda!
+    }
+    ```
+
 ## Extras
 
 https://medium.com/algorithms-and-leetcode/greedy-algorithm-explained-using-leetcode-problems-80d6fee071c4
