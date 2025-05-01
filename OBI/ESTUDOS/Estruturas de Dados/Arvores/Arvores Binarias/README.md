@@ -55,3 +55,69 @@ Uma árvore binária **estritamente binária** com `n` folhas terá sempre `2n -
 
 ## Operações sobre árvores binárias
 
+Existem várias operações primitivas que podemos aplicar a uma árvore binária.
+
+-   ### makeTree(x)
+
+    Cria uma árvore binária consistindo num único nó com o campo x.
+
+    ```cpp
+    Tree* Tree::makeTree(int x) {
+      return new Tree(x);
+    }
+    ```
+
+-   ### getFather(node)
+
+    Retorna o pai do nó.
+
+    ```cpp
+    Tree* Tree::makeTree(Tree*& tree, int x) {
+      if(tree == nullptr) {
+        tree = new Tree(x);
+        tree->parent = this;
+        return tree;
+      }
+      return nullptr;
+    }
+
+    Tree* Tree::getFather() {
+      return this->parent;
+    }
+    ```
+
+-   ### isLeft(node)
+
+    Verifica se o valor esquerdo do pai é igual ao nó `se pai.esquerda == nó, retorna verdade`.
+
+    ```cpp
+    bool Tree::isLeft() {
+      if(this->parent == nullptr) return false;
+      if(this->parent->left == this) return true;
+      return false;
+    }
+    ```
+
+-   ### isRight(node)
+
+    Verifica se o valor direito do pai é igual ao nó `se pai.direita == nó, retorna verdade`.
+
+    ```cpp
+    bool Tree::isRight() {
+      if(this->parent == nullptr) return false;
+      if(this->parent->right == this) return true;
+      return false;
+    }
+    ```
+
+-   ### getBrother(node)
+
+    Retorna o irmão do nó. Caso o nó seja o direito, retorna o nó esquerdo, e vice-versa.
+
+    ```cpp
+    Tree* Tree::getBrother() {
+      if(this->isLeft()) return parent->right;
+      if(this->isRight()) return parent->left;
+      return nullptr;
+    }
+    ```
