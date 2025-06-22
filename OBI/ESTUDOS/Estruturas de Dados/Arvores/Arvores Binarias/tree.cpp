@@ -7,7 +7,9 @@ class Tree {
         
     public:
         Tree (int);
+        void visualizer();
         void insert(int value);
+        Tree* search(int value);
         Tree* getLeft();
         Tree* getRight();
         Tree* getFather();
@@ -15,7 +17,6 @@ class Tree {
         int getValue();
         bool isleft();
         bool isright();
-
         Tree* makeTree(Tree*& tree, int value);
 };
 
@@ -82,8 +83,33 @@ void Tree::insert(int value) {
     }
 }
 
+Tree* Tree::search(int value) {
+    if(this == nullptr) {
+        return nullptr;
+    }
+
+    if(this->value == value) {
+        return this;
+    }
+
+    if(value < this->value) {
+        return this->left->search(value);
+    } else {
+        return this->right->search(value);
+    }
+}
+
+void Tree::visualizer() {
+
+}
+
 int main() {
     Tree tree(10);
     tree.insert(9);
     tree.insert(11);
+    tree.insert(22);
+    tree.insert(23);
+    tree.insert(444);
+
+    cout << tree.search(23) << "\n";
 }
