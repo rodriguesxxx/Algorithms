@@ -9,7 +9,6 @@ int search(int arr[], size_t size, int x) {
     return -1;
 }
 
-
 void insert(int **arr, size_t *size, int x) {
     if(search(*arr, *size, x) != -1) return;
     
